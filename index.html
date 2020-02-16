@@ -1,0 +1,146 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Matrix rain animation using HTML5 canvas and javascript</title>
+        <style>
+            /*basic reset*/
+            body {margin: 0; padding: 0;}
+            /*adding a black bg to the body to make things clearer*/
+            /* body {background: white;} */
+            canvas {display: block;}
+        </style>
+    </head>
+    <body>
+        <canvas id="c"></canvas>
+        <script id="rendered-js">
+            var words = []
+
+            var c = document.getElementById("c");
+            var ctx = c.getContext("2d");
+            var setIntervalObj = null
+
+            var speed = 200
+            var font_size = 10;
+            var cursor_gap = 80
+
+            //drawing the characters
+            function draw(lines)
+            {
+                //Black BG for the canvas
+                //translucent BG to show trail
+                ctx.fillStyle = "rgba(0, 0, 0, 0.02)";
+                ctx.fillRect(0, 0, c.width, c.height);
+                
+                // ctx.fillStyle = "#0F0"; //green text
+                ctx.fillStyle = "orange"; //green text
+                ctx.font = font_size + "px arial";
+                //looping over drops
+                for (var i = 0; i < lines.length; i++)
+                {
+                    line = lines[i]
+                    for(var j = 0; j < line.cursors.length; j++) {
+                        cursor = line.cursors[j]
+
+                        if(line.first_char_pos > cursor_gap && cursor.canvas_pos < 1) {
+                            cursor.canvas_pos = 1
+                            cursor.word = words[Math.floor(Math.random() * words.length)]
+                            cursor.word_pos = 0
+                            line.first_char_pos = Math.min(line.first_char_pos, cursor.canvas_pos - cursor.word.length)
+                        }
+
+                        if(cursor.canvas_pos > 0) {
+                            if(cursor.word_pos >= cursor.word.length) {
+                                cursor.word = words[Math.floor(Math.random() * words.length)]
+                                cursor.word_pos = 0
+                                line.first_char_pos = Math.min(line.first_char_pos, cursor.canvas_pos - cursor.word.length)
+                            }
+
+                            ctx.fillText(cursor.word[cursor.word_pos], cursor.canvas_pos * font_size, i * font_size)
+
+                            if (cursor.canvas_pos * font_size > c.width && Math.random() > 0.975) {
+                                cursor.canvas_pos = 0;
+                                cursor.word = "";
+                                cursor.word_pos = 0;
+                            }
+                            else {
+                                //incrementing Y coordinate
+                                cursor.word_pos++
+                                cursor.canvas_pos++;
+                            }
+                        }
+                    }
+
+                    line.first_char_pos++
+                }
+            }
+
+            function startWork() {
+                if(setIntervalObj) {
+                    clearInterval(setIntervalObj)
+                    setIntervalObj = null
+                }
+
+                if(words.length == 0) {
+                    return
+                }
+
+                //making the canvas full screen
+                c.height = 80;
+                c.width = window.innerWidth;
+                
+                var line_count = Math.floor(c.height / font_size); //number of columns for the rain
+                var line_width = Math.floor(c.width / font_size)
+                
+                var lines = []
+                for (var i = 0; i < line_count; i++) {
+                    lines[i] = {
+                        cursors: [],
+                        first_char_pos: line_width
+                    }
+                    for (var j = 0; j < 10; j++) {
+                        if(lines[i].first_char_pos > cursor_gap) {
+                            lines[i].cursors[j] = {
+                                canvas_pos: Math.floor(Math.random() * (lines[i].first_char_pos-cursor_gap))+1,
+                                word: words[Math.floor(Math.random() * words.length)],
+                                word_pos: 0
+                            }
+                            lines[i].first_char_pos = Math.min(lines[i].first_char_pos, lines[i].cursors[j].canvas_pos - lines[i].cursors[j].word.length)
+                        } else {
+                            lines[i].cursors[j] = {
+                                canvas_pos: 0,
+                                word: "",
+                                word_pos: 0
+                            }
+                        }
+                    }
+                }
+
+                // console.log(JSON.stringify(lines))
+
+                // if the bg is not black
+                ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                ctx.fillRect(0, 0, c.width, c.height);
+
+                setIntervalObj = setInterval(draw, speed, lines);
+            }
+
+            window.onresize = startWork
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && (this.status == 200 || this.status == 0)) {
+                    words = this.responseText.split("\n").map(function(el){return el + "   "})
+                    startWork()
+                    // console.log(this.responseText)
+                }
+
+                // console.log("AAA")
+                // console.log(this.responseText)
+                // console.log(this.readyState)
+                // console.log(this.status)
+            };
+            xhttp.open("GET", "words.txt", true);
+            xhttp.send();
+        </script>
+    </body>
+</html>
