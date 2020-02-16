@@ -1,0 +1,161 @@
+rs548049170 AC
+rs13328684 CC
+rs9283150 TT
+i713426 GA
+rs116587930 GT
+rs3131972 TC
+rs12184325 AA
+rs12567639 TG
+rs114525117 TC
+rs12124819 AT
+rs12127425 TC
+rs79373928 TG
+rs72888853 CC
+rs7538305 TG
+rs28444699 CC
+i713449 GA
+rs116452738 GC
+rs72631887 AT
+rs28678693 CT
+rs4970382 AG
+rs4475691 CA
+rs72631889 GG
+rs7537756 AA
+rs13302982 CC
+rs376747791 CC
+rs2880024 AG
+rs13302914 TT
+rs76723341 CC
+rs2272757 CC
+rs35471880 AG
+rs67274836 AA
+rs3828049 CA
+rs77608078 TA
+rs13303229 AG
+rs3935066 AT
+rs6669800 AA
+rs35241590 AA
+rs28561399 GT
+rs3748588 AT
+rs186101910 CT
+rs41285816 AA
+rs2341354 AG
+rs6605059 AA
+rs4970414 CG
+rs116781904 GT
+rs61770779 TC
+rs202075563 AA
+rs148041041 AA
+rs2799064 CT
+rs28591569 GA
+rs3121578 TT
+rs199563268 GG
+rs138288952 AA
+rs144164397 TG
+rs79016973 TG
+rs143324306 CA
+rs113288277 GA
+rs146243145 CA
+rs200684031 CG
+rs202061838 TT
+rs776599467 AT
+rs149268246 CG
+rs149762107 CC
+rs148948883 CG
+rs142620337 GA
+rs111818381 CT
+rs2275811 TT
+rs143143061 TT
+rs145444272 GC
+rs145116277 CA
+rs113261977 AC
+rs74223856 CG
+rs2465136 AT
+rs7526076 AT
+rs113592356 TA
+rs9442372 TC
+rs115723010 GC
+rs114326054 CG
+rs61766340 GG
+rs12132100 AT
+rs116334314 CT
+rs115662838 CA
+rs77334480 AT
+rs12731175 GC
+rs9651273 GT
+rs6671356 AT
+rs147606383 GT
+rs12080505 CG
+rs61766344 TC
+rs9442373 GG
+rs4072537 CA
+rs11260598 CT
+rs61766346 TT
+rs139475585 AC
+rs141230226 TT
+rs11260603 GC
+rs116661896 AG
+rs74045142 CG
+rs77791262 CC
+rs57527288 CT
+Coronary artery disease (IHD)
+Cerebrovascular disease (stroke) 
+Respiratory infections 
+Lower respiratory tract infections 
+HIV/AIDS 
+Chronic obstructive pulmonary disease 
+Diarrhea diseases 
+Tuberculosis 
+Malaria
+Lung cancer 
+Road traffic accidents 
+Childhood diseases 
+Hypertensive heart disease 
+Suicide 
+Stomach cancer 
+Cirrhosis of the liver 
+Nephritis/nephropathy 
+Colorectal cancer 
+Liver cancer 
+Measles 
+Violence 
+Breast cancer 
+Esophageal cancer 
+Inflammatory heart disease 
+Alzheimer's disease and other dementias 
+Falls 
+Drowning 
+Poisoning 
+Lymphomas, multiple myeloma 
+Rheumatic heart disease 
+Oral and oropharynx cancers 
+Fires 
+Pertussis 
+Prostate cancer 
+Leukemia 
+Peptic ulcer disease 
+Protein-energy malnutrition 
+Asthma 
+Cervical cancer 
+Pancreatic cancer 
+Tetanus 
+Sexually transmitted diseases excluding HIV/AIDS 
+Bladder cancer 
+Meningitis 
+War 
+Syphilis 
+Iron deficiency anemia 
+Ovarian cancer 
+Tropical diseases excluding malaria 
+Epilepsy 
+Hepatitis B 
+Parkinson's disease 
+Alcohol use disorders 
+Drug use disorders 
+Upper respiratory infections 
+Uterine cancer 
+Melanoma and other skin cancers 
+Hepatitis C 
+Leishmaniasis 
+Trypanosomiasis 
+Benign prostatic hyperplasia 
