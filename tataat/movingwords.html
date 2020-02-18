@@ -15,10 +15,11 @@
             //**************
             // Customize these
             var font_size = 10
-            var cursor_gap = 80
             var font_colour = "orange"
+            var canvas_height = 80
             
             var speed = 200
+            var cursor_gap = 80 // don't really need to change this
             
             //**************
             
@@ -88,7 +89,7 @@
                 }
 
                 //making the canvas full screen
-                c.height = 80;
+                c.height = canvas_height;
                 c.width = window.innerWidth;
                 
                 var line_count = Math.floor(c.height / font_size); //number of columns for the rain
