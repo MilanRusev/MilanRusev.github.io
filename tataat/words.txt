@@ -1,3 +1,22 @@
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
+TATAAT
 rs548049170 AC
 rs13328684 CC
 rs9283150 TT
@@ -111,25 +130,20 @@ Lung cancer
 Road traffic accidents 
 Childhood diseases 
 Hypertensive heart disease 
-Suicide 
 Stomach cancer 
 Cirrhosis of the liver 
 Nephritis/nephropathy 
 Colorectal cancer 
 Liver cancer 
 Measles 
-Violence 
 Breast cancer 
 Esophageal cancer 
 Inflammatory heart disease 
 Alzheimer's disease and other dementias 
-Falls 
-Drowning 
 Poisoning 
 Lymphomas, multiple myeloma 
 Rheumatic heart disease 
 Oral and oropharynx cancers 
-Fires 
 Pertussis 
 Prostate cancer 
 Leukemia 
@@ -139,10 +153,9 @@ Asthma
 Cervical cancer 
 Pancreatic cancer 
 Tetanus 
-Sexually transmitted diseases excluding HIV/AIDS 
+Sexually transmitted diseases
 Bladder cancer 
 Meningitis 
-War 
 Syphilis 
 Iron deficiency anemia 
 Ovarian cancer 
