@@ -3,7 +3,6 @@
         <meta charset="UTF-8">
         <title>Moving Words</title>
         <style>
-            /*basic reset*/
             body {margin: 0; padding: 0;}
             canvas {display: block;}
         </style>
@@ -28,7 +27,6 @@
             var setIntervalObj = null
             var words = []
 
-            //drawing the characters
             function draw(lines)
             {
                 //Black BG for the canvas
@@ -67,7 +65,6 @@
                                 cursor.word_pos = 0;
                             }
                             else {
-                                //incrementing Y coordinate
                                 cursor.word_pos++
                                 cursor.canvas_pos++;
                             }
@@ -88,11 +85,10 @@
                     return
                 }
 
-                //making the canvas full screen
                 c.height = canvas_height;
                 c.width = window.innerWidth;
                 
-                var line_count = Math.floor(c.height / font_size); //number of columns for the rain
+                var line_count = Math.floor(c.height / font_size);
                 var line_width = Math.floor(c.width / font_size)
                 
                 var lines = []
@@ -119,9 +115,7 @@
                     }
                 }
 
-                // console.log(JSON.stringify(lines))
-
-                // if the bg is not black
+                // in case the bg is not black
                 ctx.fillStyle = "rgba(0, 0, 0, 1)";
                 ctx.fillRect(0, 0, c.width, c.height);
 
@@ -135,7 +129,6 @@
                 if (this.readyState == 4 && (this.status == 200 || this.status == 0)) {
                     words = this.responseText.split("\n").map(function(el){return el + "   "})
                     startWork()
-                    // console.log(this.responseText)
                 }
             };
             xhttp.open("GET", "words.txt", true);
