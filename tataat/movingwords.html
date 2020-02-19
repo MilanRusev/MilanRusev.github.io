@@ -116,6 +116,11 @@
                 // in case the bg is not black
                 ctx.fillStyle = "rgba(0, 0, 0, 1)";
                 ctx.fillRect(0, 0, c.width, c.height);
+                
+                // cycle it a few times so that it doesn't start empty
+                for(var i; i < 1000; i++) {
+                    draw(lines)
+                }
 
                 setIntervalObj = setInterval(draw, speed, lines);
             }
